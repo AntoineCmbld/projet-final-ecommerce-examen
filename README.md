@@ -39,6 +39,13 @@ python scripts/anomaly_simulator.py
 - Dans les logs du job Flink : présence d’un message d’anomalie (ex. `[ANOMALY] user_id=...`)
 - Dans l’UI Flink : job `RUNNING` et métriques de throughput
 
+```bash
+docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh
+  --bootstrap-server localhost:9092
+  --topic ecommerce-anomalies
+  --from-beginning
+```
+
 ## 7) Livrables attendus
 - Code + README + rapport PDF (10 pages max)
 - Preuves d’exécution : logs/captures
