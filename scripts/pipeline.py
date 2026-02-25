@@ -110,7 +110,7 @@ def main():
                 user_id,
                 TUMBLE(event_time, INTERVAL '1' MINUTE)
         )
-        WHERE click_count > 20
+        WHERE click_count > 50
     """)
 
     # Write anomalies to Kafka — this call blocks and runs the job
